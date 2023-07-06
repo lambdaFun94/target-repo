@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.section {
+  @apply mt-8 mb-16;
+}
+
+.primary-cta {
+  @apply bg-sky-500 hover:bg-sky-600;
+}
+
+.secondary-cta {
+  @apply bg-sky-700 hover:bg-sky-800;
+}
+
+a {
+  @apply text-blue-700 hover:underline;
+}
+
+.centered-container {
+  @apply max-w-screen-lg mx-auto w-full px-4;
+}

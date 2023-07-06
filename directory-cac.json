@@ -1,0 +1,34 @@
+{
+  "$id": "us-directory-2",
+  "$schema": "https://schema.yext.com/config/pages/directory-manager/v1",
+  "name": "US Directory 2",
+  "scope": {
+    "entityTypes": [
+      "healthcareFacility"
+    ]
+  },
+  "root": {
+    "entityType": "ce_root",
+    "slug": "index.html"
+  },
+  "levels": [
+    {
+      "entityType": "ce_state",
+      "field": "address.region",
+      "slug": "{{address.region}}",
+      "fieldMappings": {
+        "c_addressRegionDisplayName": "{{#regionDisplayName}}",
+        "c_addressCountry": "{{address.countryCode}}"
+      }
+    },
+    {
+      "entityType": "ce_city",
+      "field": "address.city",
+      "slug": "{{address.region}}/{{address.city}}",
+      "fieldMappings": {
+        "c_addressRegionDisplayName": "{{#regionDisplayName}}",
+        "c_addressCountry": "{{address.countryCode}}"
+      }
+    }
+  ]
+}
